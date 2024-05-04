@@ -1,6 +1,6 @@
 :root {
   --gris: #aaa;
-  --rojo: #e93d50;
+  --rojo: #e9305b;
   --rojo-oscuro: #af303f;
   --blanco: #fff;
   --luz: rgb(229, 255, 0);
@@ -19,6 +19,7 @@ main {
   flex-direction: column;
   font-family: 'Montserrat', sans-serif;
   min-height: 100vh;
+  gap: 10px;
 }
 
 h1 {
@@ -31,26 +32,29 @@ h1 {
 
 .teclado {
   background: linear-gradient(to bottom, #eeeeee 0%,#cccccc 100%);
-  box-shadow: 6px 8px 0 6px #666, 10px 10px 10px #000;
+  box-shadow: 4px 4px 0 4px #666, 7px 7px 7px #5d5c5c;
   border-radius: 30px;
   display: grid;
-  gap: 10px;
+  gap: 8px;
   grid-template-columns: repeat(3, 1fr);
   padding: 10px;
 }
 
 .tecla {
+  display: flex;
   background-color: var(--blanco);
   border-radius: 30px;
   box-shadow: 3px 3px 0 var(--gris);
   color: var(--rojo);
   cursor: pointer;
-  height: 120px;
-  font-size: 1.75em;
+  height: 90px;
+  font-size: 1.4em;
   font-weight: bold;
   line-height: 120px;
   text-align: center;
-  width: 120px;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
 }
 
 .tecla.activa,
@@ -82,5 +86,21 @@ h1 {
 .gallo{
   height: 200px;
   width: 200px;
-  filter: drop-shadow();
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.7));
+}
+footer {
+  background-color: #333; /* Color de fondo oscuro */
+  color: #ffffff; /* Color de texto blanco */
+  padding: 20px; /* Espacio interno alrededor del contenido */
+  text-align: center; /* Alinear el texto en el centro */
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+
+}
+
+footer h2 {
+
+  font-size: 20px; /* Tamaño de fuente adecuado */
+  margin-bottom: 10px; /* Margen inferior para separar el encabezado */
 }
